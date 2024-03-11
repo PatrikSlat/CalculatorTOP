@@ -1,0 +1,23 @@
+*, *::after, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: antiquewhite;
+}
+
+img{
+    height: 35%;
+    width: 35%;
+}
+
+.calculator{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
