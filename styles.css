@@ -1,5 +1,8 @@
 *, *::after, *::after{
     box-sizing: border-box;
+    font-family: sans-serif 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: large;
 }
 
 body{
@@ -8,6 +11,8 @@ body{
     align-items: center;
     justify-content: center;
     background-color: antiquewhite;
+    margin: 0px;
+    padding: 0px;
 }
 
 img{
@@ -17,7 +22,53 @@ img{
 
 .calculator{
     display: grid;
-    align-items: center;
+    align-content: center;
     justify-content: center;
-    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.calculator > button {
+    cursor: pointer;
+    outline: none;
+    border: 1px solid black;
+    background-color: rgb(168, 148, 148);
+}
+
+.calculator > button:hover{
+    background-color: rgb(220, 220, 220, .7);
+}
+
+.calculator > button:active {
+    border: 1px solid darkgray; 
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.screen{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    grid-column: span 4;
+    background-color: rgba(47, 38, 38, 0.9);
+    border: 1px black;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+.footer{
+    margin-top: 20px;
+}
+
+.previous-output{
+    font-size: 25px;
+    color: rgb(240, 248, 255, .8);
+}
+
+.current-output{
+    font-size: 32px;
+    color: rgb(240, 248, 255);
 }
