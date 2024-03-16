@@ -42,6 +42,7 @@ equalButton.addEventListener("click", () => {
 
 function operate() {
     let result = 0;
+    let flag = false;
     if (operator === "+") {
         result = Number(previousOperation) + Number(currentOperation);
     } else if (operator === "-") {
@@ -52,15 +53,18 @@ function operate() {
         if (Number(currentOperation) !== 0) {
             result = Number(previousOperation) / Number(currentOperation);
         } else {
-            previousOutput.innerHTML = "";
-            currentOutput.innerHTML = "Cannot divide by zero !";
+            flag = true;
         }
     } else {
-        previousOutput.innerHTML = "";
-        currentOutput.innerHTML = "Something went wrong... :(";
+        flag = true;
     }
-    previousOutput.innerHTML = "";
-    currentOutput.innerHTML = result;
-    currentOperation = "";
-    previousOperation = "";
+
+    if (flag){
+        previousOutput.innerHTML = "";
+        currentOutput.innerHTML = "Something went wrong... AC to continue :(";
+    }else{
+        previousOutput.innerHTML = "";
+        currentOutput.innerHTML = result;
+        currentOperation = result;
+    }
 }
