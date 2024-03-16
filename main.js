@@ -12,25 +12,19 @@ const currentOutput = document.querySelector(".current-output");
 
 
 clearButton.addEventListener("click", () => {
-    let previousOperation = "";
-    let operator = "";
-    let currentOperation = "";
-    const currentOutput = "";
-    const previousOutput = "";
+    previousOperation = "";
+    operator = "";
+    currentOperation = "";
+    currentOutput.textContent = "";
+    previousOutput.textContent = "";
 })
   
+
+
 numberButtons.forEach((n) => {
     n.addEventListener("click", () => {
         console.log(n.textContent);
         currentOperation += n.textContent
         currentOutput.innerHTML = currentOperation
     })
-})
-
-clearButton.addEventListener("click", () => {
-    let previousOperation = "";
-    let operator = "";
-    let currentOperation = "";
-    const currentOutput = "";
-    const previousOutput = "";
 })
