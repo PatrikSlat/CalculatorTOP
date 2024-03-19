@@ -49,7 +49,7 @@ function operate() {
         result = Number(previousOperation) - Number(currentOperation);
     } else if (operator === "*") {
         result = Number(previousOperation) * Number(currentOperation);
-    } else if (operator === "/") {
+    } else if (operator === "÷") {
         if (Number(currentOperation) !== 0) {
             result = Number(previousOperation) / Number(currentOperation);
         } else {
